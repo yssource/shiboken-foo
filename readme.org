@@ -1,0 +1,73 @@
+# -*- mode:org; epa-file-encrypt-to: ("yssource@163.com"); org-confirm-babel-evaluate: nil -*-
+#+TITLE: Demo for shiboken2
+#+AUTHOR: Jimmy M. Gong
+#+EMAIL: yssource@163.com
+#+LANGUAGE: zh-Hans
+#+OPTIONS: H:3 num:nil toc:nil \n:t ::t |:t ^:nil -:nil f:t *:t <:t html-postamble:nil html-preamble:t tex:t
+#+URI: /blog/%y/%m/%d/
+#+DATE: 2019-02-20
+#+LAYOUT: post
+#+TAGS: OFFICE(o) COMPUTER(c) HOME(h) PROJECT(p) READING(r) DVD(d)
+#+CATEGORIES:
+#+DESCRIPTON:
+#+KEYWORDS:
+#+STARTUP: overview
+#+STARTUP: hidestars
+#+STARTUP: logdone
+#+STARTUP: indent
+
+* COMMENT Debuger
+* structure
+  #+begin_src bash
+    .
+    ├── ./binding
+    │   ├── ./binding/CMakeLists.txt
+    │   ├── ./binding/glue
+    │   │   ├── ./binding/glue/bindings.h
+    │   │   ├── ./binding/glue/bindings.xml
+    │   │   └── ./binding/glue/CMakeLists.txt
+    │   └── ./binding/test
+    │       ├── ./binding/test/CMakeLists.txt
+    │       └── ./binding/test/test.py
+    ├── ./.editorconfig
+    ├── ./.git
+    ├── ./.gitignore
+    ├── ./lib
+    │   ├── ./lib/foo.so
+    │   ├── ./lib/libfoo.so -> libfoo.so.1.0.0
+    │   ├── ./lib/libfoo.so.1 -> libfoo.so.1.0.0
+    │   ├── ./lib/libfoo.so.1.0 -> libfoo.so.1.0.0
+    │   └── ./lib/libfoo.so.1.0.0
+    ├── ./makefile
+    ├── ./readme.org
+    ├── ./src
+    │   ├── ./src/foo.cpp
+    │   ├── ./src/foo.h
+    │   ├── ./src/libfoo.so -> libfoo.so.1.0.0
+    │   ├── ./src/libfoo.so.1 -> libfoo.so.1.0.0
+    │   ├── ./src/libfoo.so.1.0 -> libfoo.so.1.0.0
+    │   ├── ./src/libfoo.so.1.0.0
+    │   ├── ./src/Makefile
+    │   ├── ./src/obj
+    │   │   └── ./src/obj/foo.o
+    │   ├── ./src/.qmake.stash
+    │   └── ./src/src.pro
+    └── ./test
+        ├── ./test/Makefile
+        ├── ./test/obj
+        │   └── ./test/obj/test.o
+        ├── ./test/.qmake.stash
+        ├── ./test/test
+        ├── ./test/test.cpp
+        └── ./test/test.pro
+  #+end_src
+* How to
+  #+begin_src bash
+    make all
+  #+end_src
+
+* COMMENT Local Variables                                           :ARCHIVE:
+# Local Variables:
+# fill-column: 70
+# eval: (auto-fill-mode 1)
+# End:
