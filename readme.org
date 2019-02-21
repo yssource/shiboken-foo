@@ -63,6 +63,7 @@
   #+end_src
 * How to
   #+begin_src bash
+    make envs # run only once to configure envirnoments, !important!
     make all
   #+end_src
 

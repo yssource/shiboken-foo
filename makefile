@@ -1,3 +1,6 @@
+envs:
+	export LD_LIBRARY_PATH=/home/jimmy/workspace/devel/shiboken-foo/lib:${LD_LIBRARY_PATH}
+	export PYTHONPATH=/home/jimmy/workspace/devel/shiboken-foo/lib:${PYTHONPATH}
 src-build:
 	cd src;	qmake;	make; make install
 src-clean:
