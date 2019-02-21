@@ -5,6 +5,6 @@
     <primitive-type name="std::string"/>
 
     <namespace-type name="ABQ" generate='no'>
-        <object-type name='Math' />
+        <object-type name='Counter' />
     </namespace-type>
 </typesystem>

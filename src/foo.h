@@ -1,5 +1,6 @@
 #pragma once
 // #include <QString>
+#include <QtCore/QObject>
 #include <string>
 using namespace std;
 
@@ -14,14 +15,19 @@ namespace ABQ {
 #define LIBFOO_API
 #endif
 
-class LIBFOO_API Math {
-public:
-  Math(const string);
-  ~Math() {}
-  string getM() const;
-  int squared(int x);
+class LIBFOO_API Counter : public QObject {
+  Q_OBJECT
+  int m_value;
 
-private:
-  string m_m;
+public:
+  Counter(const int);
+  int value() const;
+  string getCounter() const;
+  int squared(int x);
+public slots:
+  void setValue(int value);
+signals:
+  void valueChanged(int newValue);
 };
+
 } // namespace ABQ

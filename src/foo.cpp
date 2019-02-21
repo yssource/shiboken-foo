@@ -2,10 +2,25 @@
 #include <QDate>
 #include <QDebug>
 
+using namespace std;
+
 namespace ABQ {
-Math::Math(const string m) : m_m(m) {
-  qDebug() << "Date: " << m_m.data() << " Date2:" << QDate::currentDate();
+
+Counter::Counter(const int m) : m_value(m) {
+  qDebug() << "Date: " << m_value << " Date2:" << QDate::currentDate();
 }
-string Math::getM() const { return m_m; }
-int Math::squared(int x) { return x * x; }
+
+int Counter::value() const { return m_value; }
+
+string Counter::getCounter() const { return to_string(m_value); }
+
+void Counter::setValue(int value) {
+  if (value != m_value) {
+    m_value = value;
+    emit valueChanged(value);
+  }
+}
+
+int Counter::squared(int x) { return x * x; }
+
 } // namespace ABQ
