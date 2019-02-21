@@ -8,10 +8,10 @@ src-clean:
 test-build: src-clean src-build test-clean
 	cd test; qmake; make; ./test
 test-clean:
-	cd test
-	rm -fv ./src/.qmake.stash
-	rm -fv ./src/Makefile
-	rm -rfv ./src/obj
+	rm -fv ./test/.qmake.stash
+	rm -fv ./test/test
+	rm -fv ./test/Makefile
+	rm -rfv ./test/obj
 binding-build:
 	cd binding; mkdir ./build; cd build; cmake ..; make; make install; make test
 binding-clean:
