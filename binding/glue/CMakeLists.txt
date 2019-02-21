@@ -33,7 +33,7 @@ set(typesystem_file ${CMAKE_CURRENT_SOURCE_DIR}/bindings.xml)
 # library.
 set(generated_sources
     ${CMAKE_CURRENT_BINARY_DIR}/${bindings_library}/foo_module_wrapper.cpp
-    ${CMAKE_CURRENT_BINARY_DIR}/${bindings_library}/math_wrapper.cpp)
+    ${CMAKE_CURRENT_BINARY_DIR}/${bindings_library}/abq_math_wrapper.cpp)
 
 set(foo_source_dir ${CMAKE_CURRENT_SOURCE_DIR}/../../src)
 set(foo_lib_dir ${CMAKE_CURRENT_SOURCE_DIR}/../../lib)

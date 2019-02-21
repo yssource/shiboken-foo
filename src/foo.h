@@ -3,7 +3,7 @@
 #include <string>
 using namespace std;
 
-// namespace ABQ {
+namespace ABQ {
 #if defined _WIN32
 #if LIBFOO_BUILD
 #define LIBFOO_API __declspec(dllexport)
@@ -24,5 +24,4 @@ public:
 private:
   string m_m;
 };
-// } // namespace ABQ
-  // namespace ABQ
+} // namespace ABQ

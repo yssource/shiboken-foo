@@ -17,3 +17,6 @@ rqstra/config.yml
 *.so.*
 
 /**/build/
+/**/obj/
+*.o
+/**/Makefile
