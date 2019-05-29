@@ -4,12 +4,19 @@ cmake_minimum_required(VERSION 3.1)
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 # Instruct CMake to run moc automatically when needed
-set(CMAKE_AUTOMOC ON)
 # Create code from a list of Qt designer ui files
-# set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOUIC ON)
 
+set(CMAKE_FIND_FRAMEWORK NEVER)
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development)
-# find_package(PythonLibs REQUIRED)
+
+execute_process(
+    COMMAND "${Python3_EXECUTABLE}" -c "if True:
+    import site; print(site.getsitepackages()[-1])"
+    OUTPUT_VARIABLE PYTHON_SITE
+    OUTPUT_STRIP_TRAILING_WHITESPACE)
+set(Python3_ROOT_DIR ${PYTHON_SITE})
+# find_package(Python3Libs REQUIRED)
 # find_package(Shiboken REQUIRED)
 
 # find_program(GENERATOR generatorrunner REQUIRED)

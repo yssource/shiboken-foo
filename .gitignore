@@ -20,3 +20,7 @@ rqstra/config.yml
 /**/obj/
 *.o
 /**/Makefile
+
+.qmake.stash
+
+*.dylib

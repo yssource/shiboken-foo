@@ -1,6 +1,6 @@
 envs:
-	export LD_LIBRARY_PATH=/home/jimmy/workspace/devel/shiboken-foo/lib:${LD_LIBRARY_PATH}
-	export PYTHONPATH=/home/jimmy/workspace/devel/shiboken-foo/lib:${PYTHONPATH}
+	export LD_LIBRARY_PATH=${CURDIR}/lib:${LD_LIBRARY_PATH}
+	export PYTHONPATH=${CURDIR}/lib:${PYTHONPATH}
 src-build:
 	cd src;	qmake;	make; make install
 src-clean:
@@ -20,7 +20,7 @@ binding-build:
 binding-clean:
 	cd binding; rm -rfv ./build
 binding-test:
-	# export LD_LIBRARY_PATH=/home/jimmy/workspace/devel/shiboken-foo/lib:${LD_LIBRARY_PATH}
+	# export LD_LIBRARY_PATH=${CURDIR}/lib:${LD_LIBRARY_PATH}
 	python ./binding/test/test.py
 lib-clean:
 	cd lib; rm -rfv ./*
